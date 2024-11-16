@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs" id="calculatorTabs">
+                <li class="nav-item">
+                  <a class="nav-link active" data-bs-toggle="tab" href="#square">Square</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#cube">Cube</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#squareRoot">Square Root</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#cubeRoot">Cube Root</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="tab" href="#quiz">Quiz</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="square">
+                  <h5 class="card-title">Square Calculator</h5>
+                  <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="squareInput" placeholder="Enter a number" oninput="calculate('square')">
+                  </div>
+                  <div id="squareResult" class="alert alert-success d-none"></div>
+                </div>
+                <div class="tab-pane fade" id="cube">
+                  <h5 class="card-title">Cube Calculator</h5>
+                  <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="cubeInput" placeholder="Enter a number" oninput="calculate('cube')">
+                  </div>
+                  <div id="cubeResult" class="alert alert-success d-none"></div>
+                </div>
+                <div class="tab-pane fade" id="squareRoot">
+                  <h5 class="card-title">Square Root Calculator</h5>
+                  <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="squareRootInput" placeholder="Enter a number" oninput="calculate('squareRoot')">
+                  </div>
+                  <div id="squareRootResult" class="alert alert-success d-none"></div>
+                </div>
+                <div class="tab-pane fade" id="cubeRoot">
+                  <h5 class="card-title">Cube Root Calculator</h5>
+                  <div class="input-group mb-3">
+                    <input type="number" class="form-control" id="cubeRootInput" placeholder="Enter a number" oninput="calculate('cubeRoot')">
+                  </div>
+                  <div id="cubeRootResult" class="alert alert-success d-none"></div>
+                </div>
+                <div class="tab-pane fade" id="quiz">
+                  <ul class="nav nav-pills mb-3" id="quizTabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" data-bs-toggle="pill" href="#quizSquareRoot">Square Root Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" data-bs-toggle="pill" href="#quizCubeRoot">Cube Root Quiz</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="quizSquareRoot">
+                      <h5 class="card-title">Find the Square Root</h5>
+                      <p class="lead">What is the square root of <span id="quizSquareRootQuestion" class="fw-bold"></span>?</p>
+                      <div class="input-group mb-3">
+                        <input type="number" class="form-control" id="quizSquareRootInput" placeholder="Enter your answer">
+                        <button class="btn btn-primary" onclick="checkQuizAnswer('SquareRoot')">Check Answer</button>
+                      </div>
+                      <div id="quizSquareRootResult" class="alert d-none"></div>
+                    </div>
+                    <div class="tab-pane fade" id="quizCubeRoot">
+                      <h5 class="card-title">Find the Cube Root</h5>
+                      <p class="lead">What is the cube root of <span id="quizCubeRootQuestion" class="fw-bold"></span>?</p>
+                      <div class="input-group mb-3">
+                        <input type="number" class="form-control" id="quizCubeRootInput" placeholder="Enter your answer">
+                        <button class="btn btn-primary" onclick="checkQuizAnswer('CubeRoot')">Check Answer</button>
+                      </div>
+                      <div id="quizCubeRootResult" class="alert d-none"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
