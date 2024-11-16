@@ -1,1 +1,4 @@
-base = /Cube/
+
+export default {
+    base : /Cube/
+}
